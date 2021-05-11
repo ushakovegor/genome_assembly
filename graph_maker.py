@@ -1,4 +1,6 @@
-s_input = ['AGC', 'GCT', 'CTA', 'TAA']
+from queue import LifoQueue
+
+s_input = ['AGC', 'GCG', 'CGC', 'GCA']
 k = len(s_input[0]) #len of k-tuple
 suf_pref = set()
 for ktuple in s_input:
@@ -33,3 +35,22 @@ print(left, right)
 graph[right].add(left)
 print(graph)
 
+stack = LifoQueue()
+stack.put(left)
+res = []
+while not stack.empty():
+    v = stack.get()
+    stack.put(v)
+    if len(graph[v]) == 0:
+        res.append(v)
+        stack.get()
+    else:
+        stack.put(graph[v].pop())
+print(res)
+genome = [res.pop()]
+
+for i in range(len(res) - 1, 0, -1):
+    print(i)
+    genome.append(res[i][-1])
+genome_string = ''.join(genome)
+print(genome_string)
