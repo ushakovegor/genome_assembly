@@ -11,7 +11,7 @@ from docopt import docopt
 from graph_maker import graph_maker
 from find_euler_path import find_euler_path
 from read_fasta import read_fasta
-
+from checker import checker
 
 def main():
     args = docopt(__doc__)
@@ -19,6 +19,8 @@ def main():
         ktuples = read_fasta(args['-i'])
         graph, count_graph = graph_maker(ktuples)
         genome = find_euler_path(graph, count_graph)
+        checker(genome, ktuples)
+        print(genome)
     except Exception:
         print('There is no way to assembly the genome from this k-tuples')
     else:

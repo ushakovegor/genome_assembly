@@ -11,5 +11,8 @@ def read_fasta(file):
             ktuple += line.strip()
     if ktuple != '':
         ans.append(ktuple)
-    print(ans)
+    k = len(ans[0])
+    for ktuple in ans:
+        if len(ktuple) != k:
+            raise ValueError
     return ans
