@@ -1,4 +1,12 @@
 def read_fasta(file):
+    '''
+    Read k-tuples from .fasta file
+
+    Input:
+        file - the name of .fasta file
+    Output:
+        ans - the list of all k-tuples
+    '''
     ans = []
     ktuple = ''
     inputs = open(file, 'r')

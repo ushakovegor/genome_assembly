@@ -13,6 +13,7 @@ from find_euler_path import find_euler_path
 from read_fasta import read_fasta
 from checker import checker
 
+
 def main():
     args = docopt(__doc__)
     try:

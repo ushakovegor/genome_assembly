@@ -1,8 +1,8 @@
 def graph_maker(ktuples):
     suf_pref = set()
     for ktuple in ktuples:
-        suf_pref.add(ktuple[:-1]) #prefix
-        suf_pref.add(ktuple[1:]) #suffix
+        suf_pref.add(ktuple[:-1])  # prefix
+        suf_pref.add(ktuple[1:])  # suffix
 
     # n = len(suf_pref) # count of nodes in de Bruijn graph
     graph = {}
