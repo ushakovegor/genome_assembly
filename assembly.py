@@ -3,7 +3,7 @@ Usage:
     assembly.py [-i INPUT] [-o OUTPUT]
 
 Options:
-    -i INPUT   Name of the input fasta-file [default: input.fasta]
+    -i INPUT   Name of the input .fasta-file [default: input.fasta]
     -o OUTPUT   Name of the output file [default: output.txt]
 '''
 
